@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 
 export default function Home() {
@@ -8,26 +7,19 @@ export default function Home() {
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
       .then((res) => res.json())
-      .then((data) => setProperties(data))
-      .catch((err) => console.error(err));
+      .then((data) => setProperties(data));
   }, []);
 
   return (
-    <>
-      <Banner
-        image="/banner-home.jpg"
-        text="Chez vous, partout et ailleurs"
-      />
-
-      <div className="cards-container">
-        {properties.map((property) => (
-          <Card
-            key={property.id}
-            title={property.title}
-            cover={property.cover}
-          />
-        ))}
-      </div>
-    </>
+    <div className="home">
+      {properties.map((item) => (
+        <Card
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          cover={item.cover}
+        />
+      ))}
+    </div>
   );
 }
