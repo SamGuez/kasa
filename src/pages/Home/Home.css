@@ -1,0 +1,8 @@
+.home {
+  background-color: #f7f7f7;
+  padding: 40px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}

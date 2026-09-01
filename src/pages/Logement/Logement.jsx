@@ -2,25 +2,34 @@ import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
-import Error404 from "../Error404/Error404"; // utile si tu veux l'afficher directement
 import "./Logement.css";
 
 export default function Logement() {
   const { id } = useParams();
-  const [property, setProperty] = useState(null);
+  const [property, setProperty] = useState(null); // null = pas encore chargé
 
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((item) => item.id.toString() === id);
-        setProperty(found || null);
+
+        if (!found) {
+          setProperty(undefined); // undefined = ID incorrect
+        } else {
+          setProperty(found); // logement trouvé
+        }
       });
   }, [id]);
 
-  // ⭐ Étape 9 : redirection si ID incorrect
-  if (property === null) {
+  // ⭐ Étape 9 : redirection SI ET SEULEMENT SI ID incorrect
+  if (property === undefined) {
     return <Navigate to="/error" replace />;
+  }
+
+  // ⭐ Pendant le chargement → on attend
+  if (property === null) {
+    return <div>Chargement...</div>;
   }
 
   return (

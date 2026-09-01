@@ -1,5 +1,5 @@
-.banner {
-  background-image: url("../../assets/banner-home.svg");
+.banner-about {
+  background-image: url("../../assets/banner-propos.svg");
   background-size: cover;
   background-position: center;
   height: 200px;

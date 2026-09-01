@@ -1,0 +1,32 @@
+.collapse {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.collapse-header {
+  background-color: #ff6060;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.collapse-content {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.collapse-arrow {
+  transition: transform 0.3s ease;
+}
+
+.collapse-arrow.open {
+  transform: rotate(180deg);
+}
