@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Error404 from "../Error404/Error404";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
+import Error404 from "../Error404/Error404"; // utile si tu veux l'afficher directement
 import "./Logement.css";
 
 export default function Logement() {
@@ -18,13 +18,13 @@ export default function Logement() {
       });
   }, [id]);
 
+  // ⭐ Étape 9 : redirection si ID incorrect
   if (property === null) {
-    return <Error404 />;
+    return <Navigate to="/error" replace />;
   }
 
   return (
     <div className="logement-page">
-
       <Slideshow pictures={property.pictures} />
 
       <div className="logement-header">
@@ -68,7 +68,6 @@ export default function Logement() {
           }
         />
       </div>
-
     </div>
   );
 }
