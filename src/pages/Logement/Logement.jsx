@@ -9,7 +9,7 @@ export default function Logement() {
   const [property, setProperty] = useState(null); // null = pas encore chargé
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/properties")
+    fetch("http://localhost:8080/api/properties/")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((item) => item.id.toString() === id);

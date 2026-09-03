@@ -2,51 +2,47 @@
   position: relative;
   width: 100%;
   height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.slideshow-image {
+.slideshow img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
 }
 
-.arrow {
+/* ⭐ Flèches épaisses */
+.slideshow-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 700;      /* ⭐ Plus épais */
   color: white;
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
-.left {
+.slideshow-arrow.left {
   left: 20px;
+  font-size: 120px;        
 }
 
-.right {
+.slideshow-arrow.right {
   right: 20px;
+  font-size: 120px;         
 }
 
-.bullets {
+/* ⭐ Compteur 1/4 */
+.slideshow-counter {
   position: absolute;
   bottom: 15px;
-  width: 100%;
-  text-align: center;
-}
-
-.bullet {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
-  background: white;
-  opacity: 0.5;
-  border-radius: 50%;
-}
-
-.bullet.active {
-  opacity: 1;
+  right: 50%;
+  transform: translateX(50%);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
 }

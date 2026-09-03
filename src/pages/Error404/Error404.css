@@ -1,21 +1,29 @@
 .error-page {
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;   /* ⭐ Plus haut sur la page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;             /* ⭐ Plus d’espace entre les éléments */
 }
 
 .error-code {
-  font-size: 150px;
+  font-size: 180px;      /* Grand = plus haut visuellement */
   font-weight: bold;
   color: #ff6060;
+  margin-bottom: 100px;   /* ⭐⭐ GROS ESPACE sous le 404 */
+  margin-top: -40px;      /* Le remonte un peu */
 }
 
 .error-message {
   font-size: 24px;
-  margin: 20px 0;
+  color: #ff6060;        /* ⭐ Texte rouge */
+  margin: 0;
 }
 
 .error-link {
-  color: #ff6060;
+  color: black;          /* ⭐ Lien noir */
   font-size: 18px;
   text-decoration: underline;
 }
+

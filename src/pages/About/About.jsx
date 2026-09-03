@@ -8,21 +8,10 @@ export default function About() {
       <BannerAbout />
 
       <div className="about">
-        <Collapse title="Fiabilité">
-          <p>Les annonces postées sur Kasa garantissent une fiabilité totale...</p>
-        </Collapse>
-
-        <Collapse title="Respect">
-          <p>La bienveillance fait partie des valeurs fondatrices de Kasa...</p>
-        </Collapse>
-
-        <Collapse title="Service">
-          <p>Nos équipes se tiennent à votre disposition pour vous fournir...</p>
-        </Collapse>
-
-        <Collapse title="Sécurité">
-          <p>La sécurité est la priorité de Kasa...</p>
-        </Collapse>
+        <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale..." /> 
+        <Collapse title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa..." />
+        <Collapse title="Service" content="Nos équipes se tiennent à votre disposition pour vous fournir..." /> 
+        <Collapse title="Sécurité" content="La sécurité est la priorité de Kasa..." /> 
       </div>
     </>
   );
