@@ -9,17 +9,19 @@ export default function Logement() {
   const [property, setProperty] = useState(null); // null = pas encore chargé
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/properties/")
-      .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((item) => item.id.toString() === id);
-
-        if (!found) {
-          setProperty(undefined); // undefined = ID incorrect
-        } else {
-          setProperty(found); // logement trouvé
+    fetch(`http://localhost:8080/api/properties/${id}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Erreur HTTP ${res.status}`);
         }
-      });
+        return res.json();
+      })
+      .then((data) => {
+        setProperty(Array.isArray(data)
+          ? data.find((item) => item.id.toString() === id)
+          : data);
+      })
+      .catch(() => setProperty(undefined));
   }, [id]);
 
   // ⭐ Étape 9 : redirection SI ET SEULEMENT SI ID incorrect
