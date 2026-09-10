@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Banner />   {/* ⭐ La bannière est maintenant au-dessus */}
+      <Banner />   {/* La bannière est maintenant au-dessus */}
 
       <div className="home">
         {properties.map((item) => (
