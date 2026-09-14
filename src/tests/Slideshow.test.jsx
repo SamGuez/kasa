@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import Slideshow from "./Slideshow";
+import Slideshow from "../components/Slideshow/Slideshow";
 
 describe("Slideshow", () => {
   const pictures = ["img1.jpg", "img2.jpg", "img3.jpg"];

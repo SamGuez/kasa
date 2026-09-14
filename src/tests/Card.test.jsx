@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { MemoryRouter } from "react-router-dom";
-import Card from "./Card";
+import Card from "../components/Card/Card";
 
 describe("Card component", () => {
   it("affiche le titre et l'image quand les props sont fournies", () => {
