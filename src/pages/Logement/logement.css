@@ -1,4 +1,4 @@
-/* ⭐ Container principal */
+/*  Container principal */
 .logement-page {
   max-width: 1024px;
   margin: 40px auto;
@@ -8,7 +8,7 @@
   gap: 30px;
 }
 
-/* ⭐ Slideshow */
+/*  Slideshow */
 .slideshow {
   position: relative;
   width: 100%;
@@ -23,7 +23,7 @@
   object-fit: cover;
 }
 
-/* ⭐ Flèches */
+/*  Flèches */
 .slideshow-arrow {
   position: absolute;
   top: 50%;
@@ -42,7 +42,7 @@
   right: 20px;
 }
 
-/* ⭐ Pagination */
+/*  Pagination */
 .slideshow-counter {
   position: absolute;
   bottom: 15px;
@@ -52,14 +52,14 @@
   font-size: 18px;
 }
 
-/* ⭐ Header logement */
+/*  Header logement */
 .logement-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* ⭐ Infos logement */
+/*  Infos logement */
 .logement-info h1 {
   font-size: 28px; 
   color: #ff6060;
@@ -70,7 +70,7 @@
   margin-top: 5px;
 }
 
-/* ⭐ Tags */
+/*  Tags */
 .tags {
   display: flex;
   gap: 10px;
@@ -85,7 +85,7 @@
   font-size: 14px;
 }
 
-/* ⭐ Host + rating */
+/*  Host + rating */
 .host-rating {
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@
   gap: 15px;
 }
 
-/* ⭐ Host */
+/*  Host */
 .host {
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@
   object-fit: cover;
 }
 
-/* ⭐ Rating */
+/*  Rating */
 .star {
   font-size: 24px;
 }
@@ -120,7 +120,7 @@
   color: #e3e3e3;
 }
 
-/* ⭐ Collapses */
+/*  Collapses */
 .logement-collapses {
   display: flex;
   gap: 30px;

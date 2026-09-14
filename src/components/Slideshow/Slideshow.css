@@ -18,7 +18,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 50px;
-  font-weight: 700;      /* ⭐ Plus épais */
+  font-weight: 700;      /*  Plus épais */
   color: white;
   background: none;
   border: none;
@@ -36,7 +36,7 @@
   font-size: 120px;         
 }
 
-/* ⭐ Compteur 1/4 */
+/*  Compteur 1/4 */
 .slideshow-counter {
   position: absolute;
   bottom: 15px;

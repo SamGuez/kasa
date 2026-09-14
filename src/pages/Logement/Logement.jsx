@@ -24,12 +24,12 @@ export default function Logement() {
       .catch(() => setProperty(undefined));
   }, [id]);
 
-  // ⭐ Étape 9 : redirection SI ET SEULEMENT SI ID incorrect
+  //  Étape 9 : redirection SI ET SEULEMENT SI ID incorrect
   if (property === undefined) {
     return <Navigate to="/error" replace />;
   }
 
-  // ⭐ Pendant le chargement → on attend
+  //  Pendant le chargement → on attend
   if (property === null) {
     return <div>Chargement...</div>;
   }
