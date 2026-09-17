@@ -17,16 +17,28 @@
 }
 
 /* 📱 Responsive Banner */
+
 @media (max-width: 768px) {
   .banner {
     height: 111px;
     border-radius: 10px;
     padding-left: 15px;
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-start;   /* 🔥 le texte passe ENFIN à gauche */
   }
 
   .banner h1 {
     font-size: 24px;
-    width: 70%;
+    text-align: left;
     line-height: 1.2;
+    margin: 0;
+
+    width: 60%;        
+    white-space: normal;
   }
 }
+
+
+

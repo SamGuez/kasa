@@ -46,6 +46,10 @@
   animation: collapse-open 0.3s ease;
 }
 
+.collapse-content.closing {
+  animation: collapse-close 0.3s ease forwards;
+}
+
 /* ANIMATION */
 @keyframes collapse-open {
   from {
@@ -58,6 +62,16 @@
   }
 }
 
+@keyframes collapse-close {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
 /* DESCRIPTION — TEXTE ALIGNÉ */
 .collapse-content p {
   margin: 0;

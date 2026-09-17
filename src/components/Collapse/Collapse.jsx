@@ -27,7 +27,7 @@ export default function Collapse({ title, content }) {
       </div>
 
       {isOpen && (
-        <div className="collapse-content">
+        <div className={`collapse-content ${isOpen ? "open" : "closing"}`}>
           {Array.isArray(content) ? (
             <ul>
               {content.map((item, index) => (
