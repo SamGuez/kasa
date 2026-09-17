@@ -1,32 +1,79 @@
+/* CONTAINER */
 .collapse {
-  background-color: #f7f7f7;
   border-radius: 5px;
+  margin-bottom: 15px;
   overflow: hidden;
 }
 
+/* HEADER  */
 .collapse-header {
   background-color: #ff6060;
   color: white;
-  padding: 10px 15px;
-  font-size: 15px;
-  font-weight: bold;
+  padding: 10px 12px;       
+  font-size: 14px;           
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  height: 40px;            
 }
 
-.collapse-content {
-  padding: 20px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
+/* Titre compact */
+.collapse-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
+/* CHEVRON */
 .collapse-arrow {
+  width: 20px;            
+  height: 10px;             
   transition: transform 0.3s ease;
 }
 
 .collapse-arrow.open {
   transform: rotate(180deg);
+}
+
+/* CONTENU — ALIGNÉ & PROPRE */
+.collapse-content {
+  background-color: #f7f7f7;
+  padding: 16px;             /* alignement parfait */
+  font-size: 14px;
+  line-height: 1.5;          /* lisible */
+  animation: collapse-open 0.3s ease;
+}
+
+/* ANIMATION */
+@keyframes collapse-open {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DESCRIPTION — TEXTE ALIGNÉ */
+.collapse-content p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* LISTE — SANS PUCE & ALIGNÉE */
+.collapse-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.collapse-content li {
+  margin-bottom: 6px;
+  text-align: left;
 }
