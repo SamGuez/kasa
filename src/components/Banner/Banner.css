@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
 
-    justify-content: flex-start;   /* 🔥 le texte passe ENFIN à gauche */
+    justify-content: flex-start;   /* 🔥 le texte reste à gauche */
   }
 
   .banner h1 {
@@ -35,8 +35,9 @@
     line-height: 1.2;
     margin: 0;
 
-    width: 60%;        
-    white-space: normal;
+    max-width: 162px;   /* 🔥 force le retour à la ligne */
+    display: block;    /* 🔥 empêche flex de le garder sur une ligne */
+    white-space: normal; /* 🔥 autorise le wrap */
   }
 }
 
