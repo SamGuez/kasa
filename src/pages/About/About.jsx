@@ -1,11 +1,15 @@
-import BannerAbout from "../../components/BannerAbout/BannerAbout";
 import Collapse from "../../components/Collapse/Collapse";
+import Banner from "../../components/Banner/Banner";
+import bannerAbout from "../../assets/banner-about.svg";   // IMPORT SVG
 import "./About.css";
 
 export default function About() {
   return (
     <>
-      <BannerAbout />
+      <Banner 
+        image={bannerAbout}
+        text=""
+      />
 
       <div className="about">
         <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale..." /> 

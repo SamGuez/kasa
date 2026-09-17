@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import Banner from "../../components/Banner/Banner";
+import bannerHome from "../../assets/banner-home.svg";   // IMPORT SVG
 import "./Home.css";
 
 export default function Home() {
@@ -14,7 +15,10 @@ export default function Home() {
 
   return (
     <>
-      <Banner />   {/* La bannière est maintenant au-dessus */}
+      <Banner 
+        image={bannerHome}
+        text="Chez vous, partout et ailleurs"
+      />
 
       <div className="home">
         {properties.map((item) => (
