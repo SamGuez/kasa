@@ -23,3 +23,21 @@
 .nav-link.active {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 10px;
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  .header-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}

@@ -46,3 +46,25 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+/* 📱 Responsive Slideshow */
+@media (max-width: 768px) {
+  .slideshow {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .slideshow-arrow {
+    font-size: 40px;
+  }
+
+  .slideshow-arrow.left,
+  .slideshow-arrow.right {
+    font-size: 60px;
+  }
+
+  .slideshow-counter {
+    font-size: 14px;
+    bottom: 10px;
+  }
+}

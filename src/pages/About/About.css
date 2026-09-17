@@ -6,3 +6,11 @@
   flex-direction: column;
   gap: 30px;
 }
+
+@media (max-width: 768px) {
+  .about {
+    margin: 20px auto;
+    padding: 0 10px;
+    gap: 20px;
+  }
+}

@@ -15,3 +15,18 @@
 .banner h1 {
   color: white !important;   /*  Force le blanc */
 }
+
+/* 📱 Responsive Banner */
+@media (max-width: 768px) {
+  .banner {
+    height: 111px;
+    border-radius: 10px;
+    padding-left: 15px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+    width: 70%;
+    line-height: 1.2;
+  }
+}
